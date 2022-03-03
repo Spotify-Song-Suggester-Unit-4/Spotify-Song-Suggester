@@ -1,2 +1,2 @@
-import sklearn.neighbors._base
-import pandas as pd
+
+rec_id_list = retrieve_recs(input_id)

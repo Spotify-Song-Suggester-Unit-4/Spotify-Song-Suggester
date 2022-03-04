@@ -8,6 +8,7 @@ spacy = "*"
 sklearn = "*"
 pandas = "*"
 spotipy = "*"
+flask-assets = "*"
 
 [dev-packages]
 

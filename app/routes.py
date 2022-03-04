@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from os import getenv
 from flask_assets import Bundle, Environment
 from .api import parse_input #uses api query to parse input from both text boxes
-#from .model import retrieve_recs # get track_ids for embeds
+#from .talk_db import retrieve_recs # get track_ids for embeds
 
 def build_app():
 
@@ -28,12 +28,12 @@ def build_app():
     @app.route('/rec', methods=['POST'])
     def recommend():
         # retrieve input from text boxes
-        song_name_input = request.values['song_name_input']
-        artist_input = request.values['artist_input']
-                
+        song_name = request.values['song_name_input']
+        artist = request.values['artist_input']
+
         try:
             # use spotify api to parse input and get track_id
-            input_id = parse_input(song_name_input, artist_input)
+            input_id_api = parse_input(song_name, artist)
         except:
             message = 'We couldn\'t locate that song on Spotify. Please try again.'
             return render_template('index.html', message=message)
@@ -48,6 +48,8 @@ def build_app():
                             '7iMDaY1LnASwCk2uUpMtii',
                             '45xU99QgWETDFGhgivpYce',
                             '6oYkwjI1TKP9D0Y9II1GT7']
+
+
         except:
             message = '''That song is a little too obscure for us to have 
                         recommendations for it. Please choose another song. 
@@ -57,7 +59,7 @@ def build_app():
             return render_template('index.html', message=message)
 
         return render_template('rec.html', 
-                                input_id = rec_id_list[0] #or input_id?
+                                input_id = input_id_api, # rec_id_list[0] or input_id_api?
                                 rec1=rec_id_list[1], 
                                 rec2=rec_id_list[2], 
                                 rec3=rec_id_list[3], 

@@ -41,14 +41,13 @@
             <div class="content">
                 <p><strong>{{message}}</strong></p>
                 <form action='/rec' method="post">
-                    <p><strong>What is your favorite song?</strong></p>
-                    <input type="text" name="text_input" placeholder="track name by artist" />
+                    <p><strong>What song would you like to start with?</strong></p>
+                    <input type="text" name="song_name_input" placeholder="track name" />
                     <br>
-                    <p><strong>Select a year of music (1950-2020)</strong></p>
-                    <input type="number" name="year_input" min="1950" max="2020" placeholder="2020">
+                    <input type="text" name="artist_input" placeholder="artist name" />
                     <br>
                     <br>
-                    <input type="submit" value="sumbit" class="button primary" />
+                    <input type="submit" value="Get similar songs" class="button primary" />
                 </form>
                 <span class="image main"><img src="{{url_for('static', filename='pic02.jpg')}}" alt="" /></span>
             </div>

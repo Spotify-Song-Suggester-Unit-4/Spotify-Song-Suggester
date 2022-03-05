@@ -10,7 +10,6 @@ pandas = "*"
 spotipy = "*"
 gunicorn = "*"
 
-
 [dev-packages]
 
 [requires]

@@ -59,6 +59,7 @@ def build_app():
                         else that suits you.'''.format(input_id_api)
             return render_template('index.html', message=message)
 
+        
         return render_template('rec.html', 
                                 input_id = input_id_api, # rec_id_list[0] or input_id_api?
                                 rec1=rec_id_list[1], 

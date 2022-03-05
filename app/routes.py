@@ -52,11 +52,11 @@ def build_app():
 
 
         except:
-            message = '''That song (with track_id = {}) is a little too obscure for us to have 
+            message = '''That song is a little too obscure for us to have 
                         recommendations for it. Please choose another song. 
                         Our database includes 170,000 musical tracks released 
                         between 1950 and 2020, so we should have something 
-                        else that suits you.'''.format(input_id_api)
+                        else that suits you.'''
             return render_template('index.html', message=message)
 
         

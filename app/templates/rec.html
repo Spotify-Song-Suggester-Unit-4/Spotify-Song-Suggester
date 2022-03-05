@@ -21,11 +21,11 @@
         <!-- Section -->
         <section class="intro">
             <header>
-                <h1>Recs</h1>
+                <h1>Song Suggestions</h1>
             </header>
             <div class="content">
                 <br>
-                <p> Compare your input song...</p>
+                <p><strong> Compare your input song...</strong></p>
                 <iframe id="myIframe1" style="border-radius:12px" src="" width="100%" height="80" frameBorder="0"
                     allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -35,7 +35,7 @@
                 </script>
                 <br>
                 <br>
-                <p> ...to our top reccommendations based on spotify's musical metrics. More information on these metrics found below.</p>
+                <p><strong> ...to our top recommendations based on spotify's musical metrics. More information on these metrics found below.</strong></p>
                 <iframe id="myIframe2" style="border-radius:12px" src="" width="100%" height="80" frameBorder="0"
                     allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -72,10 +72,33 @@
                 </script>
                 <br>
                 <br>
-                <p><strong>Section to explain danceability, etc</strong></p>
+                <p><strong>Learn more about what data was used to create these suggestions.</strong></p>
                 <ul class="actions">
                     <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
                 </ul>
+                <br>
+                <br>
+                <p><strong>Some of the metrics that we used for these suggestions are fairly objective.</strong></p>
+                <ul style=“list-style-type:disc”>
+                    <li>The year that track was released</li>
+                    <li>Song duration, in milliseconds</li>
+                    <li>Tempo, in beats per minute</li>
+                    <li>Primary key of music, for instance C Major or B Flat, encoded numerically</li>
+                    <li>Mode, a boolean classification of whether the song is in a major key or not (which is not captured explicitly by the key metric)</li>
+                    <li>The loudness of the track, measured in decibels and averaged across the track</li>
+                    <li>A simple ‘explicit’ boolean for whether the track passes or fails parental control filters</li>
+                </ul>    
+                <p><strong>Other metrics are more subjective and the numbers assigned to each track are defined by Spotify using internal algorithms. We also incorporated the following data into our song comparisons.</strong></p>
+                <ul style=“list-style-type:disc”>
+                    <li>'Danceability’ describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.</li>
+                    <li>‘Valence’ describes the emotions conveyed by the track on a scale between cheery and positive to angry and sad.</li>
+                    <li>‘Acousticness’ describes where a song sits on a spectrum between acoustic and electronic.</li>
+                    <li>‘Instrumentalness’ defines how much of a track contains musical instruments rather than human vocals.</li>
+                    <li>‘Speechiness’ refers to the the portion of the song consisting of spoken word. A rap song would have a high value but a classical concerto or Tibetan Throat singing would have a low one.</li>
+                    <li>‘Energy’ describes a perceptual measure of the track where soft, slow, melodic songs have lower values and loud, dynamic songs have higher ones.</li>
+                    <li>‘Popularity’ reports a value on a scale from 0 to 100 for how well-known and frequently played a track is.</li>
+                    <li>‘Liveness’ predicts how likely the track recording is to have been performed for an audience, or just a recording studio.</li>  
+                </ul>  
             </div>
         </section>
        

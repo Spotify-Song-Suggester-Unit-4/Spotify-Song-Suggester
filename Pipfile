@@ -8,11 +8,7 @@ spacy = "*"
 sklearn = "*"
 pandas = "*"
 spotipy = "*"
-<<<<<<< HEAD
 gunicorn = "*"
-=======
-flask-assets = "*"
->>>>>>> 3abfb951e0aab77cf95c2a420b1de5d6e67b1dd4
 
 [dev-packages]
 
